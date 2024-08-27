@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
+
 namespace Ktypton_Bank
 {
-    public partial class Form1 : KryptonForm
+    public partial class Login_Admin : Form
     {
-        public Form1()
+        public Login_Admin()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-            label1.BackColor = Color.Transparent;
         }
     }
 }
