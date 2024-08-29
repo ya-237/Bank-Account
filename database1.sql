@@ -44,6 +44,31 @@ LOCK TABLES `account` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `collateral`
+--
+
+DROP TABLE IF EXISTS `collateral`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `collateral` (
+  `collateralID` int NOT NULL AUTO_INCREMENT,
+  `collateralType` varchar(50) DEFAULT NULL,
+  `description` text,
+  PRIMARY KEY (`collateralID`),
+  UNIQUE KEY `collateralID` (`collateralID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `collateral`
+--
+
+LOCK TABLES `collateral` WRITE;
+/*!40000 ALTER TABLE `collateral` DISABLE KEYS */;
+/*!40000 ALTER TABLE `collateral` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `customer`
 --
 
@@ -151,6 +176,36 @@ INSERT INTO `languages` VALUES (2,'English'),(1,'French');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `loancollateralpayments`
+--
+
+DROP TABLE IF EXISTS `loancollateralpayments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `loancollateralpayments` (
+  `collateralID` int NOT NULL,
+  `paymentID` int NOT NULL,
+  `loanID` int NOT NULL,
+  `amountUsed` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`collateralID`,`paymentID`,`loanID`),
+  KEY `paymentID` (`paymentID`),
+  KEY `loanID` (`loanID`),
+  CONSTRAINT `loancollateralpayments_ibfk_1` FOREIGN KEY (`collateralID`) REFERENCES `collateral` (`collateralID`),
+  CONSTRAINT `loancollateralpayments_ibfk_2` FOREIGN KEY (`paymentID`) REFERENCES `payments` (`paymentID`),
+  CONSTRAINT `loancollateralpayments_ibfk_3` FOREIGN KEY (`loanID`) REFERENCES `loans` (`LoanID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `loancollateralpayments`
+--
+
+LOCK TABLES `loancollateralpayments` WRITE;
+/*!40000 ALTER TABLE `loancollateralpayments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `loancollateralpayments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `loans`
 --
 
@@ -168,9 +223,15 @@ CREATE TABLE `loans` (
   `MonthlyPayment` decimal(15,2) DEFAULT NULL,
   `Balance` decimal(15,2) DEFAULT NULL,
   `Status` varchar(20) DEFAULT NULL,
+  `accountid` int DEFAULT NULL,
+  `managerid` int DEFAULT NULL,
   PRIMARY KEY (`LoanID`),
   KEY `Customerid` (`Customerid`),
-  CONSTRAINT `loans_ibfk_1` FOREIGN KEY (`Customerid`) REFERENCES `customer` (`customerid`)
+  KEY `accountid` (`accountid`),
+  KEY `managerid` (`managerid`),
+  CONSTRAINT `loans_ibfk_1` FOREIGN KEY (`Customerid`) REFERENCES `customer` (`customerid`),
+  CONSTRAINT `loans_ibfk_2` FOREIGN KEY (`accountid`) REFERENCES `account` (`accountid`),
+  CONSTRAINT `loans_ibfk_3` FOREIGN KEY (`managerid`) REFERENCES `managers` (`Managerid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -204,7 +265,7 @@ CREATE TABLE `managers` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `passwordhash` (`passwordhash`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,7 +274,36 @@ CREATE TABLE `managers` (
 
 LOCK TABLES `managers` WRITE;
 /*!40000 ALTER TABLE `managers` DISABLE KEYS */;
+INSERT INTO `managers` VALUES (1,'Mengnjoh','pamela','pampam','pamtous','pamtous@gmail.com',654599988,'Manager','1983-08-29'),(2,'YANNICK','TATAH','Tatahyannick','yanni','yannick@gmail.com',654599988,'Admin','2000-08-29');
 /*!40000 ALTER TABLE `managers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payments`
+--
+
+DROP TABLE IF EXISTS `payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `payments` (
+  `paymentID` int NOT NULL AUTO_INCREMENT,
+  `paymentDate` date DEFAULT NULL,
+  `Amount` decimal(15,2) DEFAULT NULL,
+  `loanID` int DEFAULT NULL,
+  PRIMARY KEY (`paymentID`),
+  UNIQUE KEY `paymentID` (`paymentID`),
+  KEY `loanID` (`loanID`),
+  CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`loanID`) REFERENCES `loans` (`LoanID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payments`
+--
+
+LOCK TABLES `payments` WRITE;
+/*!40000 ALTER TABLE `payments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `payments` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -231,9 +321,18 @@ CREATE TABLE `transactions` (
   `transactiondate` int NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `LoanID` int DEFAULT NULL,
+  `customerID` int DEFAULT NULL,
+  `managerID` int DEFAULT NULL,
+  `paymentID` int DEFAULT NULL,
   PRIMARY KEY (`transactionid`),
   KEY `LoanID` (`LoanID`),
-  CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`LoanID`) REFERENCES `loans` (`LoanID`)
+  KEY `customerID` (`customerID`),
+  KEY `managerID` (`managerID`),
+  KEY `paymentID` (`paymentID`),
+  CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`LoanID`) REFERENCES `loans` (`LoanID`),
+  CONSTRAINT `transactions_ibfk_2` FOREIGN KEY (`customerID`) REFERENCES `customer` (`customerid`),
+  CONSTRAINT `transactions_ibfk_3` FOREIGN KEY (`managerID`) REFERENCES `managers` (`Managerid`),
+  CONSTRAINT `transactions_ibfk_4` FOREIGN KEY (`paymentID`) REFERENCES `payments` (`paymentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -255,4 +354,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-29  7:33:03
+-- Dump completed on 2024-08-29 19:25:35
