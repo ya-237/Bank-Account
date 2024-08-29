@@ -73,6 +73,58 @@ LOCK TABLES `customer` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `customerlanguage`
+--
+
+DROP TABLE IF EXISTS `customerlanguage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `customerlanguage` (
+  `customerid` int NOT NULL,
+  `languageID` int NOT NULL,
+  PRIMARY KEY (`customerid`,`languageID`),
+  KEY `languageID` (`languageID`),
+  CONSTRAINT `customerlanguage_ibfk_1` FOREIGN KEY (`customerid`) REFERENCES `customer` (`customerid`),
+  CONSTRAINT `customerlanguage_ibfk_2` FOREIGN KEY (`languageID`) REFERENCES `languages` (`languageID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `customerlanguage`
+--
+
+LOCK TABLES `customerlanguage` WRITE;
+/*!40000 ALTER TABLE `customerlanguage` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customerlanguage` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `employeelangauge`
+--
+
+DROP TABLE IF EXISTS `employeelangauge`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `employeelangauge` (
+  `employeeID` int NOT NULL,
+  `languageID` int NOT NULL,
+  PRIMARY KEY (`employeeID`,`languageID`),
+  KEY `languageID` (`languageID`),
+  CONSTRAINT `employeelangauge_ibfk_1` FOREIGN KEY (`employeeID`) REFERENCES `managers` (`Managerid`),
+  CONSTRAINT `employeelangauge_ibfk_2` FOREIGN KEY (`languageID`) REFERENCES `languages` (`languageID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employeelangauge`
+--
+
+LOCK TABLES `employeelangauge` WRITE;
+/*!40000 ALTER TABLE `employeelangauge` DISABLE KEYS */;
+/*!40000 ALTER TABLE `employeelangauge` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `languages`
 --
 
@@ -85,7 +137,7 @@ CREATE TABLE `languages` (
   PRIMARY KEY (`languageID`),
   UNIQUE KEY `languageID` (`languageID`),
   UNIQUE KEY `languageName` (`languageName`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,6 +146,7 @@ CREATE TABLE `languages` (
 
 LOCK TABLES `languages` WRITE;
 /*!40000 ALTER TABLE `languages` DISABLE KEYS */;
+INSERT INTO `languages` VALUES (2,'English'),(1,'French');
 /*!40000 ALTER TABLE `languages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,4 +255,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-28 15:37:38
+-- Dump completed on 2024-08-29  7:33:03
