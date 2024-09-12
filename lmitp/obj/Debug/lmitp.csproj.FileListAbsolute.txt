@@ -1,0 +1,56 @@
+C:\Users\Emil\Desktop\lmitp\lmitp\bin\Debug\lmitp.exe.config
+C:\Users\Emil\Desktop\lmitp\lmitp\bin\Debug\lmitp.exe
+C:\Users\Emil\Desktop\lmitp\lmitp\bin\Debug\lmitp.pdb
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.csprojAssemblyReference.cache
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.dashboardform.resources
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.employeeform.resources
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.Form1.resources
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.Properties.Resources.resources
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.reportsform.resources
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.csproj.GenerateResource.cache
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.csproj.CoreCompileInputs.cache
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.exe
+C:\Users\Emil\Desktop\lmitp\lmitp\obj\Debug\lmitp.pdb
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\bin\Debug\lmitp.exe.config
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\bin\Debug\lmitp.exe
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\bin\Debug\lmitp.pdb
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.csproj.AssemblyReference.cache
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.dashboardform.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.Form1.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.Properties.Resources.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.csproj.GenerateResource.cache
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.csproj.CoreCompileInputs.cache
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.exe
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.pdb
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.settingsform.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.aboutusform.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.accountform.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.customerformcs.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.walletform.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.csproj.Up2Date
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.transactionform.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.statistics.resources
+C:\Users\Gucci Montero\Downloads\lmitp\lmitp\lmitp\obj\Debug\lmitp.Loan.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\bin\Debug\lmitp.exe.config
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\bin\Debug\lmitp.exe
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\bin\Debug\lmitp.pdb
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.csproj.AssemblyReference.cache
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.accountform.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.customerformcs.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.dashboardform.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.settingsform.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.Form1.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.Properties.Resources.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.aboutusform.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.statistics.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.transactionform.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.walletform.resources
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.csproj.GenerateResource.cache
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.csproj.CoreCompileInputs.cache
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.csproj.Up2Date
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.exe
+C:\Users\Gucci Montero\Downloads\Dashboard5\lmitp\lmitp\obj\Debug\lmitp.pdb
