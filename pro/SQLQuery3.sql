@@ -1,0 +1,8 @@
+﻿ALTER TABLE Account
+DROP CONSTRAINT FK_Customer;
+
+ALTER TABLE Account
+ADD CONSTRAINT FK_Customer
+FOREIGN KEY (customer_ID)
+REFERENCES Customer(customer_ID)
+ON DELETE CASCADE;

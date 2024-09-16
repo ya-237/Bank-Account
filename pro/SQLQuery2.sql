@@ -1,0 +1,1 @@
+﻿INSERT INTO logintab (username,password) VALUES ('tajc','@pass');
